@@ -1,0 +1,32 @@
+{
+    "name": "@maboiteaspam/npi-regular",
+    "version": "1.0.0",
+    "description": "regular npi stream to init node package",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dcheck": "npm outdated --depth=0",
+        "patch": "npm version patch -m \"patch %s\"",
+        "minor": "npm version minor -m \"minor %s\"",
+        "major": "npm version major -m \"major %s\"",
+        "preversion": "echo \"npm test: not defined\" && npi --explicit",
+        "version": "echo \"npm run build: not defined\"",
+        "postversion": "git push && git push --tags"
+    },
+    "keywords": [
+        "regular",
+        "npi",
+        "init",
+        "node",
+        "package"
+    ],
+    "author": "maboiteaspam",
+    "license": "WTF",
+    "dependencies": {
+        "@maboiteaspam/npi-utils": "maboiteaspam/npi-utils"
+    },
+    "devDependencies": {
+        "@maboiteaspam/npi-utils": "maboiteaspam/npi-utils"
+    },
+    "bin": {}
+}
