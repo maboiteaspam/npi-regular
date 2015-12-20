@@ -6,8 +6,8 @@ regular `npi` stream to init a node package.
 
 you should add it to `npi`,
 
-    npi --add npi-regular
-    npi --default npi-regular
+    npi --add @maboiteaspam/npi-regular
+    npi --default @maboiteaspam/npi-regular
     npm i @maboiteaspam/npi-regular --save-dev
 
 ## Usage with npi
