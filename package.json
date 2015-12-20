@@ -1,6 +1,6 @@
 {
   "name": "@maboiteaspam/npi-regular",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "regular npi stream to init node package",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "author": "maboiteaspam",
   "license": "WTF",
   "dependencies": {
-    "@maboiteaspam/npi-utils": "^1.0.3",
+    "@maboiteaspam/npi-utils": ">=1.0.3 <2.0.0-0",
     "event-stream-writer": "maboiteaspam/event-stream-writer",
     "stream-message-router": "maboiteaspam/stream-message-router",
     "stream-messenger": "maboiteaspam/stream-messenger"
