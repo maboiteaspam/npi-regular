@@ -4,13 +4,18 @@ regular npi stream to init node package
 
 ## Install
 
-    npm i @maboiteaspam/npi-regular --save-dev
+    npm i @maboiteaspam/npi-regular --save
 
 ## Usage
 
 ```js
-var module = require('npi-regular');          // your code here,
-                                              // your doc here.
+var stream = require('npi-regular');
+
+stream.write({
+  message : 'npi',
+  body    : argv
+});
+
 ```
 
 ## More
