@@ -100,7 +100,7 @@ var regularNpi = function (pkg, argv) {
           "preversion"  : "echo \"npm test: not defined\" && npi --explicit",
           "version"     : "echo \"npm run build: not defined\"",
           "postversion" : "git push && git push --tags",
-          "publish"     : "npm publish --access=public"
+          "public"      : "npm publish --access=public"
         },
         bin             : templateVars.bin,
         license         : templateVars.license,
