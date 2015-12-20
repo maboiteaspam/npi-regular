@@ -4,16 +4,11 @@ regular `npi` stream to init a node package.
 
 ## Install
 
+you should add it to `npi`,
+
     npi --add npi-regular
     npi --default npi-regular
     npm i @maboiteaspam/npi-regular --save-dev
-
-## Usage
-
-you should add it to `npi`,
-
-```bash
-```
 
 ## Usage with npi
 
