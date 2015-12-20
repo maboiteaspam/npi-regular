@@ -1,6 +1,6 @@
 {
   "name": "@maboiteaspam/npi-regular",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "regular npi stream to init node package",
   "main": "index.js",
   "scripts": {
