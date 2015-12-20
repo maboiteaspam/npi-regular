@@ -30,7 +30,6 @@
     "stream-messenger": "maboiteaspam/stream-messenger"
   },
   "devDependencies": {
-    "@maboiteaspam/npi-utils": "maboiteaspam/npi-utils"
   },
   "bin": {}
 }
