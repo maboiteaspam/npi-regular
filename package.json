@@ -24,12 +24,11 @@
   "author": "maboiteaspam",
   "license": "WTF",
   "dependencies": {
-    "@maboiteaspam/npi-utils": "maboiteaspam/npi-utils",
+    "@maboiteaspam/npi-utils": "^1.0.3",
     "event-stream-writer": "maboiteaspam/event-stream-writer",
     "stream-message-router": "maboiteaspam/stream-message-router",
     "stream-messenger": "maboiteaspam/stream-messenger"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "bin": {}
 }
