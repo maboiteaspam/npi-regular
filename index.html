@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Npi-regular by maboiteaspam</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Npi-regular</h1>
+        <h2>regular npi stream to init node package</h2>
+        <a href="https://github.com/maboiteaspam/npi-regular" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="npi-regular" class="anchor" href="#npi-regular" aria-hidden="true"><span class="octicon octicon-link"></span></a>npi-regular</h1>
+
+<p>regular <code>npi</code> stream to init a node package.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<pre><code>npi --add npi-regular
+npi --default npi-regular
+npm i @maboiteaspam/npi-regular --save-dev
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>you should add it to <code>npi</code>,</p>
+
+<pre><code></code></pre>
+<h2>
+<a id="usage-with-npi" class="anchor" href="#usage-with-npi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage with npi</h2>
+
+<pre><code>npi
+
+ Init a node project.
+
+ Usage
+   npi [module1 module2]
+   npi [opts] -- [module1 module2]
+
+ Options
+   -b             add bin.js
+
+ Examples
+   npi debug minimist multiline
+   npi -b -- debug minimist multiline
+   npi -b -w @maboiteaspam/npi-regular -- debug minimist multiline
+
+   npi -h
+</code></pre>
+
+<h2>
+<a id="expected-result" class="anchor" href="#expected-result" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected result</h2>
+
+<p>A minimal bunch of files to get on work, cooked just for you.</p>
+
+<pre><code> - node_modules/
+ - .gitignore
+ - index.js
+ - playground.js
+ - package.json
+ - README.md
+</code></pre>
+
+<p>Following <code>package.json</code> fields are updated with your input,</p>
+
+<ul>
+<li>description</li>
+<li>licence</li>
+<li>keyword</li>
+</ul>
+
+<p>The resulting <code>package.json</code> provide a set of script,</p>
+
+<h4>
+<a id="npm-run-patch" class="anchor" href="#npm-run-patch" aria-hidden="true"><span class="octicon octicon-link"></span></a>npm run patch</h4>
+
+<p>To increase <strong>patch</strong> number of your package revision.</p>
+
+<h4>
+<a id="npm-run-minor" class="anchor" href="#npm-run-minor" aria-hidden="true"><span class="octicon octicon-link"></span></a>npm run minor</h4>
+
+<p>To increase <strong>minor</strong> number of your package revision.</p>
+
+<h4>
+<a id="npm-run-major" class="anchor" href="#npm-run-major" aria-hidden="true"><span class="octicon octicon-link"></span></a>npm run major</h4>
+
+<p>To increase <strong>major</strong> number of your package revision.</p>
+
+<h4>
+<a id="npm-run-dcheck" class="anchor" href="#npm-run-dcheck" aria-hidden="true"><span class="octicon octicon-link"></span></a>npm run dcheck</h4>
+
+<p>Check your dependencies status,
+upgrade them if they are outdated.
+under the hood it is using <code>npm outdated --depth=0</code>.</p>
+
+<h4>
+<a id="npm-run-public" class="anchor" href="#npm-run-public" aria-hidden="true"><span class="octicon octicon-link"></span></a>npm run public</h4>
+
+<p>Publish your script on npm,
+under the hood it is using <code>npm publish --access=public</code></p>
+
+<hr>
+
+<p>The reason of this workflow is to enforce a better usage of <code>semver</code>.</p>
+
+<p>Please check more about it at <a href="https://github.com/rvagg/npm-explicit-deps">https://github.com/rvagg/npm-explicit-deps</a></p>
+
+<p>Read also about <code>npm version</code> <a href="https://docs.npmjs.com/cli/version">https://docs.npmjs.com/cli/version</a></p>
+
+<p>Finally, you can take advantage of <code>preversion</code> and <code>version</code> npm scripts to
+invoke build and test frameworks.</p>
+
+<h3>
+<a id="complete-your-workflow" class="anchor" href="#complete-your-workflow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complete your workflow</h3>
+
+<p>To go further you can check about those repo</p>
+
+<ul>
+<li><a href="https://github.com/commitizen/cz-cli">https://github.com/commitizen/cz-cli</a></li>
+<li><a href="https://github.com/bahmutov/npm-module-checklist">https://github.com/bahmutov/npm-module-checklist</a></li>
+</ul>
+
+<p>There s also plenty of grunt, gulp and other modules if you like.</p>
+
+<h3>
+<a id="scoped-package" class="anchor" href="#scoped-package" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scoped package</h3>
+
+<p><code>npi</code> make use of scoped package.</p>
+
+<p>Following my personal disappointment about <code>show-help</code> package,
+<code>npi</code> will use scoped package strategy by default.</p>
+
+<p>It s a better to way to share the same resource all together.</p>
+
+<ul>
+<li><a href="https://docs.npmjs.com/getting-started/scoped-packages">https://docs.npmjs.com/getting-started/scoped-packages</a></li>
+<li><a href="http://blog.npmjs.org/post/116936804365/solving-npms-hard-problem-naming-packages">http://blog.npmjs.org/post/116936804365/solving-npms-hard-problem-naming-packages</a></li>
+</ul>
+
+<h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Api</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> stream <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>npi-regular<span class="pl-pds">'</span></span>);
+
+<span class="pl-smi">stream</span>.<span class="pl-c1">write</span>({
+  message <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>npi<span class="pl-pds">'</span></span>,
+  body    <span class="pl-k">:</span> argv
+});
+</pre></div>
+
+<h2>
+<a id="read-more" class="anchor" href="#read-more" aria-hidden="true"><span class="octicon octicon-link"></span></a>Read more</h2>
+
+<ul>
+<li><a href="https://github.com/maboiteaspam/npi">https://github.com/maboiteaspam/npi</a></li>
+<li><a href="https://github.com/maboiteaspam/npi-utils">https://github.com/maboiteaspam/npi-utils</a></li>
+<li><a href="https://github.com/maboiteaspam/stream-messenger">https://github.com/maboiteaspam/stream-messenger</a></li>
+<li><a href="https://github.com/maboiteaspam/stream-message-router">https://github.com/maboiteaspam/stream-message-router</a></li>
+<li><a href="https://github.com/maboiteaspam/flower">https://github.com/maboiteaspam/flower</a></li>
+<li><a href="https://github.com/maboiteaspam/bubbler">https://github.com/maboiteaspam/bubbler</a></li>
+<li><a href="https://github.com/maboiteaspam/bubbled">https://github.com/maboiteaspam/bubbled</a></li>
+<li><a href="https://github.com/maboiteaspam/event-stream-writer">https://github.com/maboiteaspam/event-stream-writer</a></li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/maboiteaspam/npi-regular/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/maboiteaspam/npi-regular/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/maboiteaspam/npi-regular"></a> is maintained by <a href="https://github.com/maboiteaspam">maboiteaspam</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
