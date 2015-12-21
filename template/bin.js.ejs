@@ -3,18 +3,20 @@
 function usage () {/*
 
     Usage
-        -v             verbose
-        -h             show help
         ...description...
 
     Options
+        -v             verbose
+        -h             show help
         ...description...
 
     Examples
         ...description...
 */}
 
-var argv = require('minimist')(process.argv.slice(2));
-require('@maboiteaspam/set-verbosity')('npi', process.argv);
-var pkg = require('./package.json')
-require('@maboiteaspam/show-help')(usage, process.argv, pkg)
+var argv  = require('minimist')(process.argv.slice(2));
+var debug = require('@maboiteaspam/set-verbosity')('npi', process.argv);
+var pkg   = require('./package.json')
+var help  = require('@maboiteaspam/show-help')(usage, process.argv, pkg);
+
+// (!argv['_'] || !!argv['_']) && help.print(usage, pkg) && help.die();
