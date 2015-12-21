@@ -1,8 +1,8 @@
 
 var path          = require('path')
-var streamMsger   = require('stream-messenger')
-var eventStream   = require('event-stream-writer')
-var messageRouter = require('stream-message-router')
+var streamMsger   = require('@maboiteaspam/stream-messenger')
+var eventStream   = require('@maboiteaspam/event-stream-writer')
+var messageRouter = require('@maboiteaspam/stream-message-router')
 var trimT         = require('@maboiteaspam/npi-utils/trim.js')
 var spawn         = require('@maboiteaspam/npi-utils/spawn')
 var spawnCopy     = require('@maboiteaspam/npi-utils/spawn-copy')
