@@ -45,9 +45,8 @@ var regularNpi = function (pkg, argv) {
     // use npm author as username
     .pipe(spawnCopy.stdout('npm', ['config', 'get', 'init.author.name'], templateVars, 'author'))
     .pipe(trimT(templateVars, ['author']))
-    .pipe(!templateVars.author
-      ? input('Input your username :', templateVars, 'author')
-      : streamMsger('skip'))
+    .pipe(input.ifFalsy('Input your username :', templateVars, 'author'))
+
     // npm init
     .pipe(spawn('npm', function (){
       return ['init', '--scope='+templateVars.author, '--yes']
