@@ -3,19 +3,19 @@
 function usage () {/*
 
     Usage
-        ...description...
+        <%= name %> [opts]
 
     Options
         -v             verbose
         -h             show help
-        ...description...
 
     Examples
-        ...description...
+        <%= name %> -v
+        <%= name %> -h
 */}
 
 var argv  = require('minimist')(process.argv.slice(2));
-var debug = require('@maboiteaspam/set-verbosity')('npi', process.argv);
+var debug = require('@maboiteaspam/set-verbosity')('<%= name %>', process.argv);
 var pkg   = require('./package.json')
 var help  = require('@maboiteaspam/show-help')(usage, process.argv, pkg);
 
