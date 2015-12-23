@@ -96,6 +96,7 @@ To go further you can check about those repo
 - https://github.com/commitizen/cz-cli
 - https://github.com/bahmutov/npm-module-checklist
 - https://github.com/boennemann/badges
+- https://github.com/semantic-release/cracks
 
 There s also plenty of grunt, gulp and other modules if you like.
 
@@ -110,6 +111,20 @@ It s a better to way to share the same resource all together.
 
 - https://docs.npmjs.com/getting-started/scoped-packages
 - http://blog.npmjs.org/post/116936804365/solving-npms-hard-problem-naming-packages
+
+### Changelog
+
+To generate the changelog asap the module use
+
+- https://github.com/rvagg/changelog-maker
+
+### Crack
+
+Is suggested to use cracks on `patch` and `minor` release
+
+- https://github.com/semantic-release/cracks
+
+`npm install -g cracks`
 
 ## Api
 

@@ -94,12 +94,13 @@ var regularNpi = function (pkg, argv) {
       return {
         scripts : {
           "dcheck"      : "npm outdated --depth=0",
-          "patch"       : "npm version patch -m \"patch %s\"",
-          "minor"       : "npm version minor -m \"minor %s\"",
+          "crack"       : "crack -p tests/",
+          "patch"       : "echo \"npm run crack\" && npm version patch -m \"patch %s\"",
+          "minor"       : "echo \"npm run crack\" && npm version minor -m \"minor %s\"",
           "major"       : "npm version major -m \"major %s\"",
-          "preversion"  : "echo \"npm test: not defined\" && npi --explicit",
+          "preversion"  : "echo \"npm test: not defined\" && npi --changelog && npi --explicit",
           "version"     : "echo \"npm run build: not defined\"",
-          "postversion" : "git push && git push --tags",
+          "postversion" : "git push && git push --tags && echo \"npm run public\"",
           "public"      : "npm publish --access=public"
         },
         bin             : templateVars.bin,
