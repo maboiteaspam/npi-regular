@@ -85,7 +85,7 @@ var regularNpi = function (pkg, argv) {
       return ['i'].concat(modules).concat('--save');
     }))
     .pipe(spawn('npm', function (){
-      var modules = templateVars.dependencies.split(/\s/);
+      var modules = templateVars.devDependencies.split(/\s/);
       if (!modules.length || !modules[0].length) return false;
       return ['i'].concat(modules).concat('--save-dev');
     }))
