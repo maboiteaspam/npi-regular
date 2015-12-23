@@ -15,8 +15,8 @@ function usage () {/*
 */}
 
 var argv  = require('minimist')(process.argv.slice(2));
-var debug = require('@maboiteaspam/set-verbosity')('<%= name %>', process.argv);
 var pkg   = require('./package.json')
+var debug = require('@maboiteaspam/set-verbosity')(pkg.name, process.argv);
 var help  = require('@maboiteaspam/show-help')(usage, process.argv, pkg);
 
 // (!argv['_'] || !!argv['_']) && help.print(usage, pkg) && help.die();
