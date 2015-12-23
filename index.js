@@ -42,8 +42,9 @@ var regularNpi = function (pkg, argv) {
   if (argv.b) templateVars.bin[name] = './bin.js'
 
   npi
-    // use npm author as username
+    // get author and licence from npm config
     .pipe(spawnCopy.stdout('npm', ['config', 'get', 'init.author.name'], templateVars, 'author'))
+    .pipe(spawnCopy.stdout('npm', ['config', 'get', 'init.licence'], templateVars, 'license'))
     .pipe(trimT(templateVars, ['author']))
     .pipe(input.ifFalsy('Input your username :', templateVars, 'author'))
 
@@ -60,13 +61,10 @@ var regularNpi = function (pkg, argv) {
     .pipe(trimT(templateVars, ['description','keywords','license']))
 
     .pipe( !argv['_'].length ? spawn('star', [], {silent: true}) : streamMsger('skip'))
-    .pipe( !argv['_'].length
-      ? input('Input the module\'s dependencies :', templateVars, 'dependencies')
-      : streamMsger('skip') )
+    .pipe(input.ifFalsy('Input the module\'s dependencies :', templateVars, 'dependencies'))
 
     .pipe(spawn('star', ['--dev'], {silent: true}))
-    .pipe(input('Input the module\'s devDep\'s :',
-      templateVars, 'devDependencies'))
+    .pipe(input('Input the module\'s devDep\'s :', templateVars, 'devDependencies'))
     .pipe(trimT(templateVars, ['dependencies', 'devDependencies']))
 
     //generate templates
