@@ -8,6 +8,10 @@ you should add it to `npi`,
 
     npi --add @maboiteaspam/npi-regular
     npi --default @maboiteaspam/npi-regular
+
+
+To install as a local dependency
+
     npm i @maboiteaspam/npi-regular --save-dev
 
 ## Usage with npi
@@ -130,3 +134,16 @@ stream.write({
 - https://github.com/maboiteaspam/bubbler
 - https://github.com/maboiteaspam/bubbled
 - https://github.com/maboiteaspam/event-stream-writer
+
+
+
+## Develop
+
+```bash
+npi -d @maboiteaspam/npi-regular
+npi --link .
+
+mkdir tomate
+cd tomate
+npi
+```
