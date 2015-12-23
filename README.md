@@ -91,6 +91,7 @@ To go further you can check about those repo
 
 - https://github.com/commitizen/cz-cli
 - https://github.com/bahmutov/npm-module-checklist
+- https://github.com/boennemann/badges
 
 There s also plenty of grunt, gulp and other modules if you like.
 
