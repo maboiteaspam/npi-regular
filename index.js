@@ -6,7 +6,7 @@ var messageRouter = require('@maboiteaspam/stream-message-router')
 var trimT         = require('@maboiteaspam/npi-utils/trim.js')
 var spawn         = require('@maboiteaspam/npi-utils/spawn')
 var spawnCopy     = require('@maboiteaspam/npi-utils/spawn-copy')
-var choose        = require('@maboiteaspam/npi-utils/inquire-licence')
+var choose        = require('@maboiteaspam/npi-utils/inquire-license')
 var input         = require('@maboiteaspam/npi-utils/inquire-input')
 var bubble        = require('@maboiteaspam/npi-utils/bubble')
 var push          = require('@maboiteaspam/npi-utils/push')
@@ -42,9 +42,9 @@ var regularNpi = function (pkg, argv) {
   if (argv.b) templateVars.bin[name] = './bin.js'
 
   npi
-    // get author and licence from npm config
+    // get author and license from npm config
     .pipe(spawnCopy.stdout('npm', ['config', 'get', 'init.author.name'], templateVars, 'author'))
-    .pipe(spawnCopy.stdout('npm', ['config', 'get', 'init.licence'], templateVars, 'license'))
+    .pipe(spawnCopy.stdout('npm', ['config', 'get', 'init.license'], templateVars, 'license'))
     .pipe(trimT(templateVars, ['author']))
     .pipe(input.ifFalsy('Input your username :', templateVars, 'author'))
 
