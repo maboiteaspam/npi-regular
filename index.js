@@ -45,7 +45,7 @@ var regularNpi = function (pkg, argv) {
     // get author and license from npm config
     .pipe(spawnCopy.stdout('npm', ['config', 'get', 'init.author.name'], templateVars, 'author'))
     .pipe(spawnCopy.stdout('npm', ['config', 'get', 'init.license'], templateVars, 'license'))
-    .pipe(trimT(templateVars, ['author']))
+    .pipe(trimT(templateVars, ['author', 'license']))
     .pipe(input.ifFalsy('Input your username :', templateVars, 'author'))
 
     // npm init
@@ -57,7 +57,7 @@ var regularNpi = function (pkg, argv) {
     // gather user input
     .pipe(input('Input the module\'s description :' , templateVars, 'description'))
     .pipe(input('Input the module\'s keywords :'    , templateVars, 'keywords'))
-    .pipe(choose('Please choose a license :'        , templateVars, 'license'))
+    .pipe(choose.ifFalsy('Please choose a license :', templateVars, 'license'))
     .pipe(trimT(templateVars, ['description','keywords','license']))
 
     .pipe( !argv['_'].length ? spawn('star', [], {silent: true}) : streamMsger('skip'))
